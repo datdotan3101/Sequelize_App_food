@@ -1,7 +1,5 @@
-import { where } from "sequelize";
 import sequelize from "../common/sequelize/init.sequelize";
 import initModels from "../models/init-models";
-import like_res from "../models/like_res";
 
 const likeService = {
   findAll: async () => {
