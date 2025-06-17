@@ -9,6 +9,6 @@ const rootRouter = express.Router();
 rootRouter.use("/demo", demoRouter);
 rootRouter.use("/like", likeRouter);
 rootRouter.use("/evaluate", evaluateRouter);
-rootRouter.use("/order", orderRouter )
+rootRouter.use("/order-food", orderRouter);
 
 export default rootRouter;
