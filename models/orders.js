@@ -29,11 +29,16 @@ export default class orders extends Model {
     quantity: {
       type: DataTypes.INTEGER,
       allowNull: false
+    },
+    created_at: {
+      type: DataTypes.DATE,
+      allowNull: true,
+      defaultValue: Sequelize.Sequelize.literal('CURRENT_TIMESTAMP')
     }
   }, {
     sequelize,
     tableName: 'orders',
-    timestamps: true,
+    timestamps: false,
     indexes: [
       {
         name: "PRIMARY",

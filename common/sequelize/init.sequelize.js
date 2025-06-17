@@ -3,6 +3,7 @@ import initModels from "../../models/init-models";
 import { DATABASE_URL } from "../constants/app.constant";
 
 const sequelize = new Sequelize(DATABASE_URL);
+
 export const models = initModels(sequelize);
 
 try {

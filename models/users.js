@@ -22,11 +22,16 @@ export default class users extends Model {
     password: {
       type: DataTypes.STRING(255),
       allowNull: false
+    },
+    created_at: {
+      type: DataTypes.DATE,
+      allowNull: true,
+      defaultValue: Sequelize.Sequelize.literal('CURRENT_TIMESTAMP')
     }
   }, {
     sequelize,
     tableName: 'users',
-    timestamps: true,
+    timestamps: false,
     indexes: [
       {
         name: "PRIMARY",
